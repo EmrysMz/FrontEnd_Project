@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Choose a User</title>
+</head>
+<body>
+<h1>Choose a user</h1>
+
+<select [(ngModel)]="selectedUser" name="user" id="userSelect" (change)="selectUser()">
+  <option value="" disabled selected>Choose a user</option>
+  <option *ngFor="let user of users" [ngValue]="user">{{ user.name }}</option>
+</select>
+
+<div class="start-button">
+  <button id="startButton" [disabled]="selectedUser === null" (click)="startApp()">Start</button>
+</div>
+
+<router-outlet></router-outlet>
+</body>
+</html>

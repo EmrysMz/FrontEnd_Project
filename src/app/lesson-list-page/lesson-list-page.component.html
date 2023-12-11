@@ -1,0 +1,20 @@
+<div class="page-container">
+    <h2 class="page-title">List of Available Learning Packages</h2>
+
+    <div class="lessons-container">
+        <div class="lesson-card" *ngFor="let lesson of lessons">
+            <div class="card-content">
+                <h3>{{ lesson.title }}</h3>
+                <p>{{ lesson.description }}</p>
+                <ul>
+                    <li>Category: {{ lesson.category }}</li>
+                    <li>Target Audience: {{ lesson.targetaudience }}</li>
+                    <li>Difficulty: {{ lesson.difficulty }}</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" [routerLink]="'/facts-' + lesson.category.toLowerCase().replace(' ', '_')">Discover Learning Facts</a>
+            </div>
+        </div>
+    </div>
+</div>

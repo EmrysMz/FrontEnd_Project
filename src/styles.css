@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+.app-border {
+  border-style: solid;
+  border-width: 1pt;
+}
+.form-control.rounded {
+  border-radius: 20px;
+}

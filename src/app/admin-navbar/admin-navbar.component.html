@@ -1,0 +1,59 @@
+<!-- main-page.component.html -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+
+    <a class="navbar-brand" href="#" routerLink="/user-page">
+        <i class="fas fa-home"></i> Home
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="/lesson-list">Explore Lessons</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Study Now</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Progresses Statistics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Achievements</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="helpMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Help
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="helpMenuDropdown">
+                    <li><a class="dropdown-item" href="#">Glossary</a></li>
+                    <li><a class="dropdown-item" href="#">Contact Support</a></li>
+                </ul>
+            </li>
+            <!-- Add the dropdown for "Add..." -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="addMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Add...
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="addMenuDropdown">
+                    <li><a class="dropdown-item" href="#" routerLink="/add-learning-package">Add Learning Package</a></li>
+                    <li><a class="dropdown-item" href="#">Add Learning Fact</a></li>
+                    <li><a class="dropdown-item" href="#">Add User</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Removed the Profile dropdown menu -->
+
+</nav>
+
+<!-- Remove the line <app-lesson-edit-form></app-lesson-edit-form> -->
+
+<!-- Add the link element in the menu nav bar -->
+
+<!-- Make sure you still have <router-outlet></router-outlet> in your main page -->
