@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Delete Learning Fact</h2>
+    <form (ngSubmit)="deleteFact()">
+        <div>
+            <label for="learningpackageid">Select Learning Package:</label>
+            <select id="learningpackageid" name="learningpackageid" [(ngModel)]="deleteFormData.learningpackageid" (change)="fetchFactsByPackageId(deleteFormData.learningpackageid)" required>
+                <option *ngFor="let pkg of packages" [value]="pkg.learningpackageid">{{ pkg.title }}</option>
+            </select>
+        </div>
+        <div>
+            <label for="learningfactid">Select Learning Fact:</label>
+            <select id="learningfactid" name="learningfactid" [(ngModel)]="deleteFormData.learningfactid" required>
+                <option *ngFor="let fact of facts" [value]="fact.learningfactid">{{ fact.title }}</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Delete Learning Fact</button>
+        </div>
+    </form>
+</div>

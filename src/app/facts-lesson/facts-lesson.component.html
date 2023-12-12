@@ -1,6 +1,10 @@
 <!-- facts-lesson.component.html -->
-<div *ngFor="let fact of facts" class="fact-card">
-  <h3>{{ fact.title }}</h3>
-  <p>{{ fact.description }}</p>
-  <div class="fact-content">{{ fact.content }}</div>
+<div *ngFor="let fact of facts">
+  <ng-container *ngIf="!fact.disable">
+    <div class="fact-card">
+      <h3>{{ fact.title }}</h3>
+      <p>{{ fact.description }}</p>
+      <div class="fact-content">{{ fact.content }}</div>
+    </div>
+  </ng-container>
 </div>

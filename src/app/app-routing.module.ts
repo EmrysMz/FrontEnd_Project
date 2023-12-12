@@ -17,6 +17,11 @@ import {AddLearningFactComponent} from "./add-learning-fact/add-learning-fact.co
 import {AddUserComponent} from "./add-user/add-user.component";
 import {UpdateLearningPackageComponent} from "./update-learning-package/update-learning-package.component";
 import {UpdateLearningFactComponent} from "./update-learning-fact/update-learning-fact.component";
+import {DeleteLearningFactComponent} from "./delete-learning-fact/delete-learning-fact.component";
+import {DeleteLearningPackageComponent} from "./delete-learning-package/delete-learning-package.component";
+import {DeleteUserComponent} from "./delete-user/delete-user.component";
+import {ProgressStatisticsComponent} from "./progress-statistics/progress-statistics.component";
+
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -35,7 +40,11 @@ const routes: Routes = [
   { path: 'add-learning-fact', component: AddLearningFactComponent },
   {path : 'add-user',component : AddUserComponent},
   {path: 'update-learning-package', component:UpdateLearningPackageComponent},
-  {path: 'update-learning-fact', component:UpdateLearningFactComponent }
+  {path: 'update-learning-fact', component:UpdateLearningFactComponent },
+  {path: 'delete-learning-fact', component:DeleteLearningFactComponent},
+  {path: 'delete-learning-package', component: DeleteLearningPackageComponent},
+  {path: 'delete-user',component: DeleteUserComponent},
+  {path: 'progress-statistics',component:ProgressStatisticsComponent }
 ];
 
 @NgModule({

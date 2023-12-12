@@ -1,0 +1,15 @@
+<!-- delete-learning-package.component.html -->
+<div class="container">
+    <h2>Delete Learning Package</h2>
+    <form (ngSubmit)="onDelete()">
+        <div>
+            <label for="learningpackageid">Select Learning Package:</label>
+            <select id="learningpackageid" name="learningpackageid" [(ngModel)]="deleteFormData.learningpackageid" required>
+                <option *ngFor="let pkg of packages" [value]="pkg.learningpackageid">{{ pkg.title }}</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Delete Learning Package</button>
+        </div>
+    </form>
+</div>

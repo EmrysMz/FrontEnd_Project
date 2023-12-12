@@ -1,0 +1,124 @@
+/* Ajoutez ces styles à votre fichier CSS actuel */
+
+.progress-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.package-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.package-header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.package-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.detail {
+    flex: 0 0 48%; /* Ajustez la largeur des détails en fonction de vos besoins */
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.completed {
+    color: #2ecc71;
+}
+
+.in-progress {
+    color: #f39c12;
+}
+
+/* Nouveaux styles pour la section Learning Facts */
+.learning-facts {
+    margin-top: 20px;
+}
+
+.learning-facts h4 {
+    color: #3498db;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.learning-facts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.learning-facts li {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.learning-facts li .title {
+    font-weight: bold;
+}
+
+.learning-facts li.completed {
+    color: #2ecc71;
+}
+
+.learning-facts li.in-progress {
+    color: #f39c12;
+}
+
+.learning-facts {
+    margin-top: 20px;
+}
+
+.learning-facts h4 {
+    color: #3498db;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.learning-facts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.learning-facts li {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.learning-facts li .title {
+    font-weight: bold;
+}
+
+.learning-facts li.completed {
+    color: #2ecc71;
+}
+
+.learning-facts li.in-progress {
+    color: #f39c12;
+}
+
+.completed-icon {
+    color: #2ecc71;
+    margin-left: 5px;
+}

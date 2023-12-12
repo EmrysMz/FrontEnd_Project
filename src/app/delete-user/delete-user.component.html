@@ -1,0 +1,15 @@
+<!-- delete-user.component.html -->
+<div class="container">
+    <h2>Delete User</h2>
+    <form (ngSubmit)="onDelete()">
+        <div>
+            <label for="userid">Select User:</label>
+            <select id="userid" name="userid" [(ngModel)]="deleteFormData.userid" required>
+                <option *ngFor="let user of users" [value]="user.userid">{{ user.name }}</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Delete User</button>
+        </div>
+    </form>
+</div>

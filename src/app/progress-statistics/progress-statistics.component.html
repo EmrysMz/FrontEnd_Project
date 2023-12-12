@@ -1,0 +1,47 @@
+<!-- progress-statistics.component.html -->
+
+<div class="progress-container">
+    <h2>Learning Package Progression</h2>
+
+    <div *ngFor="let userPackage of userPackages" class="package-card">
+        <div class="package-header">
+            <h3>{{ userPackage.LearningPackageTable.title }}</h3>
+            <p>Category: {{ userPackage.LearningPackageTable.category }}</p>
+        </div>
+
+        <div class="package-details">
+            <div class="detail">
+                <span class="label">Start Date:</span>
+                <span class="value">{{ userPackage.startdate | date:'medium' }}</span>
+            </div>
+            <div class="detail">
+                <span class="label">End Date:</span>
+                <span class="value">{{ userPackage.exceptedenddate | date:'medium' }}</span>
+            </div>
+            <div class="detail">
+                <span class="label">Minutes per Day Objective:</span>
+                <span class="value">{{ userPackage.minutesperdayobjective }}</span>
+            </div>
+            <div class="detail">
+                <span class="label">Status:</span>
+                <span class="value {{ userPackage.finished ? 'completed' : 'in-progress' }}">
+          {{ userPackage.finished ? 'Completed' : 'In Progress' }}
+        </span>
+            </div>
+        </div>
+
+        <!-- Learning Facts section -->
+        <div class="learning-facts">
+            <h4>Learning Facts</h4>
+            <ul>
+                <li *ngFor="let fact of userPackage.UserLearningFactTables" [ngClass]="{'completed': fact.finished, 'in-progress': !fact.finished}">
+                    <span class="title">{{ fact.LearningFactTable.title }}</span>
+                    <span class="status">
+                {{ fact.finished ? 'Completed' : 'In Progress' }}
+                        <i *ngIf="fact.finished" class="fas fa-check-circle completed-icon"></i>
+            </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
