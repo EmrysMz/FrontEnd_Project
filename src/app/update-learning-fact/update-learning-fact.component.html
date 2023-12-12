@@ -1,0 +1,37 @@
+<!-- update-learning-fact.component.html -->
+<div class="container">
+    <h2>Update Learning Fact</h2>
+    <form (ngSubmit)="updateFact()">
+        <div>
+            <label for="learningpackageid">Select Learning Package:</label>
+            <select id="learningpackageid" name="learningpackageid" [(ngModel)]="updateFormData.learningpackageid" (change)="fetchFactsByPackageId(updateFormData.learningpackageid)" required>
+                <option *ngFor="let pkg of packages" [value]="pkg.learningpackageid">{{ pkg.title }}</option>
+            </select>
+        </div>
+        <div>
+            <label for="learningfactid">Select Learning Fact:</label>
+            <select id="learningfactid" name="learningfactid" [(ngModel)]="updateFormData.learningfactid" required>
+                <option *ngFor="let fact of facts" [value]="fact.learningfactid">{{ fact.title }}</option>
+            </select>
+        </div>
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" [(ngModel)]="updateFormData.title" required placeholder="Enter the title">
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" [(ngModel)]="updateFormData.description" required placeholder="Enter the description">
+        </div>
+        <div>
+            <label for="content">Content:</label>
+            <input type="text" id="content" name="content" [(ngModel)]="updateFormData.content" required placeholder="Enter the content">
+        </div>
+        <div>
+            <label for="disable">Disable:</label>
+            <input type="checkbox" id="disable" name="disable" [(ngModel)]="updateFormData.disable">
+        </div>
+        <div>
+            <button type="submit">Update Learning Fact</button>
+        </div>
+    </form>
+</div>

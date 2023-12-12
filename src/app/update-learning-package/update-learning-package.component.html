@@ -1,0 +1,35 @@
+<!-- update-learning-package.component.html -->
+<div class="container">
+    <h2>Update Learning Package</h2>
+    <form (ngSubmit)="updatePackage()">
+        <div>
+            <label for="learningpackageid">Select Package:</label>
+            <select id="learningpackageid" name="learningpackageid" [(ngModel)]="updateFormData.learningpackageid" required>
+                <option *ngFor="let pkg of packages" [value]="pkg.learningpackageid">{{ pkg.title }}</option>
+            </select>
+        </div>
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" [(ngModel)]="updateFormData.title" required placeholder="Enter the title">
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" [(ngModel)]="updateFormData.description" required placeholder="Enter the description">
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" [(ngModel)]="updateFormData.category" required placeholder="Enter the category">
+        </div>
+        <div>
+            <label for="targetaudience">Target Audience:</label>
+            <input type="text" id="targetaudience" name="targetaudience" [(ngModel)]="updateFormData.targetaudience" required placeholder="Enter the target audience">
+        </div>
+        <div>
+            <label for="difficulty">Difficulty:</label>
+            <input type="number" id="difficulty" name="difficulty" [(ngModel)]="updateFormData.difficulty" required placeholder="Enter a number between 0 and 10">
+        </div>
+        <div>
+            <button type="submit">Update Package</button>
+        </div>
+    </form>
+</div>

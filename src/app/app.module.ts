@@ -26,6 +26,11 @@ import { FactsPhysicsComponent } from './facts-physics/facts-physics.component';
 import { FactsComputerScienceComponent } from './facts-computer-science/facts-computer-science.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AddLearningPackageComponent } from './add-learning-package/add-learning-package.component';
+import { FactsLessonComponent } from './facts-lesson/facts-lesson.component';
+import { AddLearningFactComponent } from './add-learning-fact/add-learning-fact.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UpdateLearningPackageComponent } from './update-learning-package/update-learning-package.component';
+import { UpdateLearningFactComponent } from './update-learning-fact/update-learning-fact.component';
 
 
 @NgModule({
@@ -48,7 +53,12 @@ import { AddLearningPackageComponent } from './add-learning-package/add-learning
     FactsPhysicsComponent,
     FactsComputerScienceComponent,
     AdminNavbarComponent,
-    AddLearningPackageComponent
+    AddLearningPackageComponent,
+    FactsLessonComponent,
+    AddLearningFactComponent,
+    AddUserComponent,
+    UpdateLearningPackageComponent,
+    UpdateLearningFactComponent
   ],
   imports: [
     BrowserModule,

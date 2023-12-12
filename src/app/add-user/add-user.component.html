@@ -1,0 +1,14 @@
+<!-- add-user.component.html -->
+
+<div class="container">
+  <h2>Add User</h2>
+  <form (ngSubmit)="submitForm()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required placeholder="Enter the name">
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>

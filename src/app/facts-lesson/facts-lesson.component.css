@@ -1,0 +1,21 @@
+.fact-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.fact-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.fact-card p {
+  margin-bottom: 10px;
+}
+
+.fact-card .fact-content {
+  border-top: 2px dashed #ccc;
+  padding-top: 10px;
+}
