@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-facts-lesson',
@@ -12,7 +13,7 @@ export class FactsLessonComponent implements OnInit {
   facts!: any[];
   packageId!: number;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
     // Extraire l'identifiant du package à partir de l'URL
@@ -32,4 +33,14 @@ export class FactsLessonComponent implements OnInit {
       console.error('Package ID is null or undefined.');
     }
   }
+
+  startLesson(fact: any) {
+    this.router.navigate(['/lesson-content', fact.learningfactid]);
+  }
+
+
+
+
+
+
 }

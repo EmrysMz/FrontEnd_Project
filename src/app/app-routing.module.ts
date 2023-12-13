@@ -21,6 +21,7 @@ import {DeleteLearningFactComponent} from "./delete-learning-fact/delete-learnin
 import {DeleteLearningPackageComponent} from "./delete-learning-package/delete-learning-package.component";
 import {DeleteUserComponent} from "./delete-user/delete-user.component";
 import {ProgressStatisticsComponent} from "./progress-statistics/progress-statistics.component";
+import {LessonDetailComponent} from "./lesson-detail/lesson-detail.component";
 
 
 const routes: Routes = [
@@ -44,7 +45,9 @@ const routes: Routes = [
   {path: 'delete-learning-fact', component:DeleteLearningFactComponent},
   {path: 'delete-learning-package', component: DeleteLearningPackageComponent},
   {path: 'delete-user',component: DeleteUserComponent},
-  {path: 'progress-statistics',component:ProgressStatisticsComponent }
+  {path: 'progress-statistics',component:ProgressStatisticsComponent },
+  {path:'lesson-content/:lessonId',component:LessonDetailComponent}
+
 ];
 
 @NgModule({

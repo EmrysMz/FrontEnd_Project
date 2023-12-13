@@ -35,6 +35,8 @@ import { DeleteLearningFactComponent } from './delete-learning-fact/delete-learn
 import { DeleteLearningPackageComponent } from './delete-learning-package/delete-learning-package.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { ProgressStatisticsComponent } from './progress-statistics/progress-statistics.component';
+import { LessonDetailComponent } from './lesson-detail/lesson-detail.component';
+import { StudyNowComponent } from './study-now/study-now.component';
 
 
 @NgModule({
@@ -66,7 +68,9 @@ import { ProgressStatisticsComponent } from './progress-statistics/progress-stat
     DeleteLearningFactComponent,
     DeleteLearningPackageComponent,
     DeleteUserComponent,
-    ProgressStatisticsComponent
+    ProgressStatisticsComponent,
+    LessonDetailComponent,
+    StudyNowComponent
   ],
   imports: [
     BrowserModule,

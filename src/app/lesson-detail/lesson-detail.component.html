@@ -1,0 +1,18 @@
+<!-- lesson-detail.component.html -->
+<div *ngIf="lesson" class="lesson-container">
+  <h2>{{ lesson.title }}</h2>
+  <p>{{ lesson.description }}</p>
+  <div class="lesson-content">{{ lesson.content }}</div>
+
+  <div *ngIf="!showAnswer" class="flash-card">
+    <p>Question: {{ lesson.question }}</p>
+    <button class="show-answer-button" (click)="toggleAnswerVisibility()">Show Answer</button>
+  </div>
+
+  <div *ngIf="showAnswer" class="flash-card">
+    <p>Question: {{ lesson.question }}</p>
+    <p>Answer: {{ lesson.answer }}</p>
+  </div>
+
+  <button class="add-to-deck-button">Add to my deck</button>
+</div>

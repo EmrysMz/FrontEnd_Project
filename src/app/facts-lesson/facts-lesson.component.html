@@ -2,9 +2,15 @@
 <div *ngFor="let fact of facts">
   <ng-container *ngIf="!fact.disable">
     <div class="fact-card">
-      <h3>{{ fact.title }}</h3>
-      <p>{{ fact.description }}</p>
-      <div class="fact-content">{{ fact.content }}</div>
+      <div class="fact-details">
+        <div class="fact-info">
+          <h3>{{ fact.title }}</h3>
+          <p>{{ fact.description }}</p>
+        </div>
+        <div class="fact-actions">
+          <button class="start-button" (click)="startLesson(fact)">Start</button>
+        </div>
+      </div>
     </div>
   </ng-container>
 </div>

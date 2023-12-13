@@ -12,6 +12,8 @@ export class AddLearningFactComponent implements OnInit {
     title: '',
     description: '',
     content: '',
+    question : '',
+    answer : '',
     learningpackageid: 0, // Initialize with a default value
     disable: false
   };
@@ -42,6 +44,8 @@ export class AddLearningFactComponent implements OnInit {
       title: '',
       description: '',
       content: '',
+      question: '',
+      answer: '',
       learningpackageid: 0,
       disable: false
     };

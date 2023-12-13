@@ -16,6 +16,14 @@
       <input type="text" id="content" name="content" [(ngModel)]="formData.content" required placeholder="Enter the content">
     </div>
     <div>
+      <label for="content">Question:</label>
+      <input type="text" id="question" name="question" [(ngModel)]="formData.question" required placeholder="Enter the content">
+    </div>
+    <div>
+      <label for="content">Answer:</label>
+      <input type="text" id="answer" name="answer" [(ngModel)]="formData.answer" required placeholder="Enter the content">
+    </div>
+    <div>
       <label for="learningpackageid">Learning Package:</label>
       <select id="learningpackageid" name="learningpackageid" [(ngModel)]="formData.learningpackageid" required>
         <option *ngFor="let package of learningPackages" [value]="package.learningpackageid">{{ package.title }}</option>

@@ -27,10 +27,12 @@ export class ProgressStatisticsComponent implements OnInit {
     this.http.get<any[]>(`http://localhost:3000/api/user-packages/${this.userId}`)
         .subscribe((packages) => {
           this.userPackages = packages;
+          console.log("User packages :",this.userPackages)
 
           // Fetch Learning Facts for each Learning Package
           this.userPackages.forEach((userPackage: any) => {
             this.fetchLearningFacts(userPackage.LearningPackageTable.learningpackageid);
+
           });
         });
   }
@@ -38,6 +40,9 @@ export class ProgressStatisticsComponent implements OnInit {
   fetchLearningFacts(learningPackageId: number) {
     this.http.get<any[]>(`http://localhost:3000/api/learning-facts/${this.userId}/${learningPackageId}`)
         .subscribe((learningFacts) => {
+          console.log("userid :",this.userId)
+          console.log("learningpackageid ;",learningPackageId)
+          console.log(learningFacts)
           // Assign the fetched Learning Facts to the corresponding Learning Package
           const userPackage = this.userPackages.find((pkg) => pkg.LearningPackageTable.learningpackageid === learningPackageId);
           if (userPackage) {

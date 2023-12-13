@@ -1,21 +1,35 @@
+/* Ajoutez ces styles à votre fichier CSS actuel */
 .fact-card {
-  margin-bottom: 20px;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
   padding: 20px;
-  background-color: #f2f2f2;
-  border: 2px solid #ccc;
-  border-radius: 5px;
 }
 
-.fact-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.fact-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.fact-card p {
-  margin-bottom: 10px;
+.fact-info {
+  flex: 0 0 70%;
 }
 
-.fact-card .fact-content {
-  border-top: 2px dashed #ccc;
-  padding-top: 10px;
+.fact-actions {
+  flex: 0 0 30%;
+}
+
+.start-button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  background-color: #27ae60;
 }
