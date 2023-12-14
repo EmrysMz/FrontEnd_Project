@@ -1,0 +1,28 @@
+<!-- user-learning.component.html -->
+<div *ngIf="lesson" class="lesson-container">
+    <h2>{{ lesson.title }}</h2>
+    <p>{{ lesson.description }}</p>
+    <div class="lesson-content">{{ lesson.content }}</div>
+
+    <div *ngIf="!showAnswer" class="flash-card">
+        <p>Question: {{ lesson.question }}</p>
+        <button class="show-answer-button" (click)="toggleAnswerVisibility()">Show Answer</button>
+    </div>
+
+    <div *ngIf="showAnswer" class="flash-card">
+        <p>Question: {{ lesson.question }}</p>
+        <p>Answer: {{ lesson.answer }}</p>
+    </div>
+
+    <div class="actions d-flex justify-content-between mt-3">
+        <div class="d-flex align-items-center">
+            <label for="confidencelevel" class="me-2">Confidence Level:</label>
+            <select id="confidencelevel" name="confidencelevel" class="form-select" [(ngModel)]="lesson.confidencelevel">
+
+                <option *ngFor="let level of confidenceLevels" [value]="level">{{ level }}</option>
+            </select>
+            <button class="btn btn-primary ms-2" (click)="studyAgain()">Study Again</button>
+        </div>
+        <button class="btn btn-success" (click)="completeLearning()">Complete Learning</button>
+    </div>
+</div>

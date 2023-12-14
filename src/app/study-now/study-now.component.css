@@ -1,0 +1,125 @@
+/* Ajoutez ces styles à votre fichier CSS actuel */
+
+.study-now-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.package-card {
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+}
+
+.package-header {
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+}
+
+.package-header h3 {
+  margin: 0;
+}
+
+.category {
+  font-weight: bold;
+  color: #3498db;
+}
+
+.package-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.status-detail {
+  margin-bottom: 10px;
+}
+
+.status-label {
+  font-weight: bold;
+  color: #3498db;
+}
+
+.status-value {
+  color: #2ecc71; /* Completed color */
+}
+
+.status-value.in-progress {
+  color: #f39c12; /* In Progress color */
+}
+
+.learning-facts {
+  margin-top: 20px;
+}
+
+.learning-facts h4 {
+  color: #3498db;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.learning-facts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.learning-facts li {
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fact-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fact-title {
+  font-weight: bold;
+}
+
+.fact-status {
+  color: #2ecc71; /* Completed color */
+}
+
+.fact-status.in-progress {
+  color: #f39c12; /* In Progress color */
+}
+
+.go-to-fact-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.go-to-fact-button:hover {
+  background-color: #2980b9;
+}
+/* Add these styles to your existing CSS file */
+
+.fact-date {
+  font-style: italic;
+  color: #3498db;
+}
+
+.fact-date.in-progress {
+  color: #f39c12; /* Change color for In Progress */
+}

@@ -22,6 +22,8 @@ import {DeleteLearningPackageComponent} from "./delete-learning-package/delete-l
 import {DeleteUserComponent} from "./delete-user/delete-user.component";
 import {ProgressStatisticsComponent} from "./progress-statistics/progress-statistics.component";
 import {LessonDetailComponent} from "./lesson-detail/lesson-detail.component";
+import {StudyNowComponent} from "./study-now/study-now.component";
+import {UserLearningComponent} from "./user-learning/user-learning.component";
 
 
 const routes: Routes = [
@@ -46,7 +48,9 @@ const routes: Routes = [
   {path: 'delete-learning-package', component: DeleteLearningPackageComponent},
   {path: 'delete-user',component: DeleteUserComponent},
   {path: 'progress-statistics',component:ProgressStatisticsComponent },
-  {path:'lesson-content/:lessonId',component:LessonDetailComponent}
+  {path:'lesson-content/:lessonId',component:LessonDetailComponent},
+  {path :'study-now',component:StudyNowComponent},
+  {path :'user-learning/:lessonId',component:UserLearningComponent}
 
 ];
 

@@ -1,0 +1,62 @@
+/* lesson-detail.component.css */
+
+.lesson-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #3498db;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.lesson-content {
+    margin-top: 15px;
+}
+
+.flash-card {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.show-answer-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* user-learning.component.css */
+
+.actions {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.finish-learning-button {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#confidenceLevel {
+    margin-right: 10px;
+    padding: 5px;
+}

@@ -1,11 +1,8 @@
 <ng-container *ngIf="userAuthService.getUserId()">
 
-    <ng-container *ngIf="!userAuthService.getIsAdmin()">
-        <app-menu-nav-bar></app-menu-nav-bar>
-    </ng-container>
-    <ng-container *ngIf="userAuthService.getIsAdmin()">
-        <app-admin-navbar></app-admin-navbar>
-    </ng-container>
+
+  <app-admin-navbar></app-admin-navbar>
+
 
 </ng-container>
 

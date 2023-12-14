@@ -1,1 +1,42 @@
-<p>study-now works!</p>
+<div class="study-now-container">
+  <h2>Study Now</h2>
+
+  <div *ngFor="let userPackage of userPackages" class="package-card">
+    <div class="package-header">
+      <h3>{{ userPackage.LearningPackageTable.title }}</h3>
+      <p class="category">Category: {{ userPackage.LearningPackageTable.category }}</p>
+    </div>
+
+    <div class="package-details">
+      <div class="status-detail">
+        <span class="status-label">Status:</span>
+        <span class="status-value {{ userPackage.finished ? 'completed' : 'in-progress' }}">
+          {{ userPackage.finished ? 'Completed' : 'In Progress' }}
+          <i *ngIf="userPackage.finished" class="fas fa-check-circle"></i>
+          <i *ngIf="!userPackage.finished" class="fas fa-clock"></i>
+        </span>
+      </div>
+    </div>
+
+    <!-- Learning Facts section -->
+    <div class="learning-facts">
+      <h4>Learning Facts</h4>
+      <ul>
+        <li *ngFor="let fact of userPackage.UserLearningFactTables" [ngClass]="{'completed': fact.finished, 'in-progress': !fact.finished}">
+          <div class="fact-content">
+            <span class="fact-title">{{ fact.LearningFactTable.title }}</span>
+            <span class="fact-date" *ngIf="!fact.finished">
+              Next time to study: {{ calculateDate(fact.lastrevieweddate, fact.confidencelevel) | date:'dd/MM/yy, h:mm a' }}
+            </span>
+            <span class="fact-status">
+              {{ fact.finished ? 'Completed' : 'In Progress' }}
+              <i *ngIf="fact.finished" class="fas fa-check-circle text-success"></i>
+              <i *ngIf="!fact.finished" class="fas fa-clock text-warning"></i>
+            </span>
+          </div>
+          <button class="go-to-fact-button" (click)="navigateToFact(fact)">Go to Fact</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -37,6 +37,7 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { ProgressStatisticsComponent } from './progress-statistics/progress-statistics.component';
 import { LessonDetailComponent } from './lesson-detail/lesson-detail.component';
 import { StudyNowComponent } from './study-now/study-now.component';
+import { UserLearningComponent } from './user-learning/user-learning.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { StudyNowComponent } from './study-now/study-now.component';
     DeleteUserComponent,
     ProgressStatisticsComponent,
     LessonDetailComponent,
-    StudyNowComponent
+    StudyNowComponent,
+    UserLearningComponent
   ],
   imports: [
     BrowserModule,
