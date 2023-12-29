@@ -38,6 +38,7 @@ import { ProgressStatisticsComponent } from './progress-statistics/progress-stat
 import { LessonDetailComponent } from './lesson-detail/lesson-detail.component';
 import { StudyNowComponent } from './study-now/study-now.component';
 import { UserLearningComponent } from './user-learning/user-learning.component';
+import { HighchartsChartModule} from "highcharts-angular";
 
 
 @NgModule({
@@ -81,7 +82,8 @@ import { UserLearningComponent } from './user-learning/user-learning.component';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HighchartsChartModule
   ],
   providers: [UserAuthService],
   bootstrap: [AppComponent]

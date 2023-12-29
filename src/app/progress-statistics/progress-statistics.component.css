@@ -122,3 +122,15 @@
     color: #2ecc71;
     margin-left: 5px;
 }
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.highcharts-container {
+    max-width: 600px;
+    margin: 0 auto;
+}

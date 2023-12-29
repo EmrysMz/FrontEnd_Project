@@ -1,5 +1,3 @@
-<!-- progress-statistics.component.html -->
-
 <div class="progress-container">
     <h2>Learning Package Progression</h2>
 
@@ -25,8 +23,8 @@
             <div class="detail">
                 <span class="label">Status:</span>
                 <span class="value {{ userPackage.finished ? 'completed' : 'in-progress' }}">
-          {{ userPackage.finished ? 'Completed' : 'In Progress' }}
-        </span>
+                    {{ userPackage.finished ? 'Completed' : 'In Progress' }}
+                </span>
             </div>
         </div>
 
@@ -37,11 +35,17 @@
                 <li *ngFor="let fact of userPackage.UserLearningFactTables" [ngClass]="{'completed': fact.finished, 'in-progress': !fact.finished}">
                     <span class="title">{{ fact.LearningFactTable.title }}</span>
                     <span class="status">
-                {{ fact.finished ? 'Completed' : 'In Progress' }}
+                        {{ fact.finished ? 'Completed' : 'In Progress' }}
                         <i *ngIf="fact.finished" class="fas fa-check-circle completed-icon"></i>
-            </span>
+                    </span>
                 </li>
             </ul>
+        </div>
+        <div class="chart-container">
+            <highcharts-chart
+                    [Highcharts]="Highcharts"
+                    [options]="userPackage.chartOptions"
+            ></highcharts-chart>
         </div>
     </div>
 </div>
